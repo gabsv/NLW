@@ -10,6 +10,7 @@ ul {
 
 body {
     background-image: url(./assets/bg.jpg);
+    object-fit: cover;
     background-position: top center; /* no topo e centralizada na tela */
     background-size: 100% auto; /* se adapta no tamanho da tela horizontalmente (largura disponivel na tela) */
     background-repeat: no-repeat; /* para que a imagem nao se repita verticalmente, o padrao é repetir ate cobrir toda a altura da pagina */
