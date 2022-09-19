@@ -1,0 +1,170 @@
+* {
+    margin: 0; 
+    padding: 0; /* sao preenchimentos internos da pagina */
+    box-sizing: border-box; /* considera só os 580px mesmo que coloque preenchimento na caixa */
+}
+
+ul {
+    list-style: none; /* tira os pontinhos (tópicos) que representam cada item da lista*/
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center; /* no topo e centralizada na tela */
+    background-size: 100% auto; /* se adapta no tamanho da tela horizontalmente (largura disponivel na tela) */
+    background-repeat: no-repeat; /* para que a imagem nao se repita verticalmente, o padrao é repetir ate cobrir toda a altura da pagina */
+    background-color: #121214; /*hexadecimal*/
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+header {
+    margin-top: 32px;
+    height: calc(120px + 32px);  /* isso faz com que voce defina a altura do header, ou seja, quando der F5 o header já vai ter uma altura fixa, ou seja, mesmo que a imagem carregue posteriormente ao <main> o espaço dela ja estara definido, ou seja nao a imagem nao vai empurrar o <main> pra baixo depois de carregar. Sem isso o main vai começar em cima, no topo da pagina, e depois a imagem vai empurrar o main pra baixo quando terminar de carregar, dando um "pulinho" */
+}
+
+    header div {
+        width: 120px;
+        margin: auto;
+        background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+        display: flex;
+        border-radius: 50%;
+        padding: 4px;
+     
+        transition: transform .3s;
+        }
+    
+header div:hover {
+    transform: scale(1.1)
+}
+
+header img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* ou 
+    display: grid;
+    gap: 24px;
+    */
+}
+
+section {
+    color: white;
+
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    }
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    /* font-weight: 900;
+    font-size: 24px; */
+    letter-spacing: -0.47px;
+}
+
+section p {
+    /* font-weight: 400;
+    font-size: 16px; navegador traz como padrão; analisando eu percebo que se remover essas linhas a pagina nao é modificada, logo nao preciso dessas linhas */
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap; /*quando chegar no limite da caixa, ele joga o elementro da lista pra baixo ao inves de aumentar a largura da caixa */
+    gap:16px;
+    margin-top: 24px; 
+    }
+
+section ul li {
+transition: transform .3s;
+}
+
+section ul li:hover {
+transform: scale(1.1)
+}
+.game-list img {
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid #443E54;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: #443E54 1px solid;
+}
+
+/* animaçao */
+
+header div {
+    animation: fromTop .7s .2s backwards; 
+    /* 
+    esse 1s poderia ser substituido por animation-delay: 1s;
+    animation-delay: 1s; so depois de um segundo voce vai iniciar a animaçao, ou seja, depois da imagem carregar 
+    
+    quando a animaçao inicia ele aplica essas duas propriedades e termina aplicando as mesmas duas propriedades
+    vai puxar as propriedades e manter elas na div até que animaçao inicie (backwards)
+    backwards é uma propriedade que vai permitir que a header se inicie já aplicando os efeitos da animaçao, ou seja, depois de .4s de espera (delay).
+    */
+}
+
+main section {
+    animation: fromBottom .7s backwards; /* puxa aquelas propriedades do keyframes e mantem no main section */
+}
+
+main section:nth-child(1) { /* main pega o section filho numero 1 */
+    animation-delay: 0; /* começa em tempo real */
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px) 
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
