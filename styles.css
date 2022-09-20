@@ -24,7 +24,7 @@ body * {
 
 header {
     margin-top: 32px;
-    height: calc(120px + 32px);  /* isso faz com que voce defina a altura do header, ou seja, quando der F5 o header já vai ter uma altura fixa, ou seja, mesmo que a imagem carregue posteriormente ao <main> o espaço dela ja estara definido, ou seja nao a imagem nao vai empurrar o <main> pra baixo depois de carregar. Sem isso o main vai começar em cima, no topo da pagina, e depois a imagem vai empurrar o main pra baixo quando terminar de carregar, dando um "pulinho" */
+    height: calc(120px + 0);  /* isso faz com que voce defina a altura do header, ou seja, quando der F5 o header já vai ter uma altura fixa, ou seja, mesmo que a imagem carregue posteriormente ao <main> o espaço dela ja estara definido, ou seja nao a imagem nao vai empurrar o <main> pra baixo depois de carregar. Sem isso o main vai começar em cima, no topo da pagina, e depois a imagem vai empurrar o main pra baixo quando terminar de carregar, dando um "pulinho" */
 }
 
     header div {
