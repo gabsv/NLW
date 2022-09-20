@@ -93,7 +93,7 @@ section p {
 section ul {
     display: flex;
     flex-wrap: wrap; /*quando chegar no limite da caixa, ele joga o elementro da lista pra baixo ao inves de aumentar a largura da caixa */
-    gap:16px;
+    gap: 16px;
     margin-top: 24px; 
     }
 
@@ -121,8 +121,8 @@ transform: scale(1.1)
 header div {
     animation: fromTop .7s .2s backwards; 
     /* 
-    esse 1s poderia ser substituido por animation-delay: 1s;
-    animation-delay: 1s; so depois de um segundo voce vai iniciar a animaçao, ou seja, depois da imagem carregar 
+    esse .2s poderia ser substituido por animation-delay: 1s;
+    animation-delay: .2s; so depois de um segundo voce vai iniciar a animaçao, ou seja, depois da imagem carregar 
     
     quando a animaçao inicia ele aplica essas duas propriedades e termina aplicando as mesmas duas propriedades
     vai puxar as propriedades e manter elas na div até que animaçao inicie (backwards)

@@ -4,7 +4,7 @@
 
 > Trilha Explorer
 
-Projeto construido do evento Next Level Week da Rocketseat.
+Projeto alternativo construido do evento Next Level Week da Rocketseat.
 
 [Clique aqui para acessar](https://gabsv.github.io/NLW)
 
